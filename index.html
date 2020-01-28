@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>​Emails Editor</title>
+	</head>
+	<body>
+        <div id="emails-editor"></div>
+
+		<script src="dist/emails-editor.js"></script>
+		<script>
+			const container = document.querySelector("#emails-editor");
+			const options = {
+				title: "Emails Editor"
+			};
+
+			EmailsEditor({container, ...options});
+		</script>
+	</body>
+</html>
