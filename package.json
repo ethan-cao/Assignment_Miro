@@ -12,9 +12,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node ./index.js",
-		"server": "nodemon --inspect ./index.js",
 		"build": "webpack -p --config webpack.config.js",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
 		"heroku-postbuild": ""
 	},
 	"bugs": {
@@ -29,7 +27,6 @@
 		"express": "^4.17.1",
 		"mini-css-extract-plugin": "^0.9.0",
 		"node-sass": "^4.13.1",
-		"npmlog": "^4.1.2",
 		"sass-loader": "^8.0.2",
 		"webpack": "^4.41.5",
 		"webpack-cli": "^3.3.10"
