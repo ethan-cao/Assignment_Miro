@@ -2,18 +2,33 @@
     width: 600px;
     height: 400px;
     margin: 20px;
-
 }
 
 #{$FORM} {
-    padding: 50px;
-    height: 300px;
-    
+    display: flex;
+    flex-direction: column;
+
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);    
-    border-radius: 16px;
-
-
+    border-radius: 16px 16px 16px 16px;
     font: 400 14px/24px Open Sans,sans-serif;
+}
+
+#{$FORM_TOP} {
+    flex: 0 1 250px;
+
+    padding: 50px 50px 0px 50px;
+    
+    border-radius: 16px 16px 0px 0px;
 
     background-color: #f8f8f7;
+}
+
+#{$FORM_BOTTOM} {
+    flex: 0 1 50px;
+
+    padding: 0px 50px 50px 50px;
+    
+    border-radius: 0px 0px 16px 16px;
+
+    background-color: white;
 }
