@@ -2,29 +2,32 @@
 
 import Header from "./Header";
 import Editor from "./Editor";
-import Buttion from "./Button";
+import Footer from "./Footer";
 
 const CONTAINER_CLASS = "form-container";
-const FORM_CLASS = "form-container";
+const FORM_CLASS = "form";
 
-const Form = ({...options}) => {
-    console.log(`Build -- [Editor] -- Build Editor`);
-    
-    const form = document.createElement("div");
-    form.setAttribute("id", options.boardName);
-    form.setAttribute("class", CONTAINER_CLASS);
+const Form = ({ ...options }) => {
+	console.log(`Build -- [Form] -- start`);
 
-    form.innerHTML = Form.template;
+	const boardName = options.boardName;
+	const form = document.createElement("div");
+	form.setAttribute("id", boardName);
+	form.setAttribute("class", CONTAINER_CLASS);
 
-    console.log(`Build -- [Editor] -- Build Editor`);
+	const template = `
+        <div class=${FORM_CLASS}>
+            ${Header(boardName)}
+            ${Editor()}
+            ${Footer()}
+        </div>
+    `;
 
-    return form;
+	form.innerHTML = template;
+
+	console.log(`Build -- [Form] -- end`);
+
+	return form;
 };
-
-Form.template = `
-    <div class=${FORM_CLASS}>
-        ${Header()}
-    </div>
-`;
 
 export default Form;

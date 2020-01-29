@@ -1,0 +1,15 @@
+#{$HEADER} {
+    height: 25%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 20px;
+
+    border-radius: 16px 16px 0px 0px;
+}
+
+#{$HEADER} .bold-text {
+	font-weight: bold;
+}
