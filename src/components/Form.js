@@ -21,7 +21,7 @@ const Form = ({ ...options }) => {
 		<div class=${FORM_CLASS}>	
 			<div class=${FORM_TOP_CLASS}>
 				${Header(boardName)}
-				${Editor()}
+				${Editor(options.emails)}
 			</div>
 			<div class=${FORM_BOTTOM_CLASS}>
 				${Footer()}
