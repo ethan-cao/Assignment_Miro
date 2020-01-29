@@ -1,16 +1,18 @@
 "use strict";
 
-import Editor from "./components/Editor";
+import "./styles/main.scss";
+import Form from "./components/Form";
+
+// TODO log time spent
 
 const EmailsEditor = ({container, ...options}) => {
     console.log(`Render -- [EmailsEditor] -- Render in ${container.id} with options ${JSON.stringify(options)}`);
 
+    const form = Form(options);
 
-    const editor = Editor(options);
-    container.append(editor);
+    container.append(form);
 
     console.log(`Render -- [EmailsEditor] -- Finishing rendering`);
-    // TODO log time spent
 };
 
 export default EmailsEditor;

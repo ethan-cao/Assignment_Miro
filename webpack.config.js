@@ -1,6 +1,10 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+
+const MODE = process.env.NODE_ENV;
+const IS_PROD = MODE === "production";
+
 module.exports = {
 	entry: "./src/entry.js",
 	output: {
@@ -24,9 +28,7 @@ module.exports = {
 				test: /\.scss$/,
 				exclude: /(node_modules|bower_components)/,
 				use: [
-					process.env.NODE_ENV !== "production"
-						? "style-loader"
-						: MiniCssExtractPlugin.loader,
+					IS_PROD ? MiniCssExtractPlugin.loader : "style-loader",
 					"css-loader",
 					"sass-loader"
 				]

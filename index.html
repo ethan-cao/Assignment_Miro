@@ -5,16 +5,23 @@
 		<title>​Emails Editor</title>
 	</head>
 	<body>
-        <div id="emails-editor"></div>
+		<div id="emails-editor"></div>
 
 		<script src="dist/emails-editor.js"></script>
 		<script>
 			const container = document.querySelector("#emails-editor");
-			const options = {
-				title: "Emails Editor"
-			};
 
-			EmailsEditor({container, ...options});
+			const options1 = {
+				boardName: "Board1",
+				emails: ["Guangxue.Cao@Outlook.com"]
+			};
+			EmailsEditor({ container, ...options1 });
+
+			const options2 = {
+				boardName: "Board2",
+				emails: ["Guangxue.Cao@Outlook.com"]
+			};
+			// EmailsEditor({ container, ...options2 });
 		</script>
 	</body>
 </html>
