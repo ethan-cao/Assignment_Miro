@@ -1,6 +1,6 @@
 "use strict";
 
-import {REMOVE} from "../events/NameSpace";
+import {REMOVE, RECORD} from "../events/NameSpace";
 
 const Editor = (emails) => {
     console.log(`Build -- [Editor] -- start`);
@@ -30,7 +30,7 @@ Editor.innerTemplate = (emails) => {
             <span class=${Editor.REMOVER_CLASS} data-ns=${REMOVE}></span>
         </div>
     `, "") + `
-        <input class=${Editor.INPUT_CLASS} type="text" placeholder="add more people..."></input>
+        <input class=${Editor.INPUT_CLASS} data-ns=${RECORD} type="text" placeholder="add more people..."></input>
     `
 };
 

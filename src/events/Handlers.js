@@ -1,5 +1,7 @@
 "use strict";
 
+import { ENTER, COMMA } from "./Keys";
+
 const Handlers = {
     handle : (ns, type, target, actions) => {
         const eventKey = type + "." + ns; 
@@ -9,7 +11,7 @@ const Handlers = {
             return;
         }
 
-        handler(target, actions);
+        handler(target, actions, event);
     },
 };
 
@@ -27,6 +29,18 @@ const EventMap = {
     },
     "click.GET": () => {
 
+    },
+    "keydown.RECORD": (target, actions, event) => {
+        const key = event.which || event.keyCode; 
+
+        if (key !== ENTER && key !== COMMA) {
+            return;
+        }
+
+        const newEmail = target.value;
+        const emails = actions.getEmails();
+        emails.push(newEmail);
+        actions.setEmails(emails);
     }
 };
 
