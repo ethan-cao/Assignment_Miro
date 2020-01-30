@@ -34,11 +34,16 @@ const Form = ({ ...options }) => {
 
 	form.innerHTML = template;
 
+	const renderEmails = (emails) => {	
+		const editor = document.querySelector('.' + Editor.EDITOR_CLASS);
+		editor.innerHTML = Editor.innerTemplate(emails);
+	}
+
 	const getEmails = () => emails;
 
 	const setEmails = (newEmails) => {
 		emails = [...newEmails];
-		// render(emails);
+		renderEmails(emails);
 		callback(emails);
 	};
 
@@ -53,7 +58,7 @@ const Form = ({ ...options }) => {
 		getEmails,
 		setEmails,
 		subscribe
-	}
+	};
 };
 
 export default Form;
