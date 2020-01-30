@@ -1,17 +1,21 @@
 "use strict";
 
-const EventListener = {
-    listenOn : function(element, ...events) {
-        events.forEach((event) => {
-            console.log(event);
+import Handlers from "./Handlers";
 
-            element.addEventListener(event, () => {
-                const nameSpace = event.target.dataset.ns;
+const Listener = {
+    listenOn : function(element, events, actions) {
+        events.forEach((event) => {
+            element.addEventListener(event, (event) => {
+                const target = event.target;
+                const type = event.type;
+                const nameSpace = target.dataset.ns;
                 
-                console.log(nameSpace);
+                console.log(`${type} on ${nameSpace}`);
+
+                Handlers.handle(nameSpace, type, target, actions);
             })
         } );
     }
 };
 
-export default EventListener;
+export default Listener;

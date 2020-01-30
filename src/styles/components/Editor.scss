@@ -32,7 +32,7 @@
 	line-height: 24px;
 }
 
-#{$EMAIL}::after {
+#{$REMOVER}::after {
     content: $cross;
     font-size: large;
     padding: 0px 5px;

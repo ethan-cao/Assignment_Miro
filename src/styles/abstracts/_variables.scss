@@ -1,3 +1,6 @@
+/* 
+    Selector 
+ */
 $CONTAINER: ".form-container";
 $FORM: ".form";
 $FORM_TOP: ".form__top";
@@ -7,6 +10,7 @@ $EDITOR: ".form__editor";
 $FOOTER: ".form__footer";
 
 $EMAIL: ".form__editor__email";
+$REMOVER: ".form__editor__remover";
 $INPUT: ".form__editor__input";
 
 $BUTTON_PRIMARY: ".button_primary";
@@ -16,5 +20,4 @@ $BUTTON_SECONDARY: "button_secondary";
 
 $light-blue: #e0eaff;
 $blue: #4262FF;
-
 $cross: "\D7";
