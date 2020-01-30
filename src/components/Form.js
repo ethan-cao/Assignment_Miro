@@ -12,7 +12,10 @@ const FORM_BOTTOM_CLASS = "form__bottom";
 const Form = ({ ...options }) => {
 	console.log(`Build -- [Form] -- start`);
 
-	const boardName = options.boardName;
+	let boardName = options.boardName;
+	let emails = options.emails;
+	let callback = () => {};
+
 	const form = document.createElement("div");
 	form.setAttribute("id", boardName);
 	form.setAttribute("class", CONTAINER_CLASS);
@@ -21,7 +24,7 @@ const Form = ({ ...options }) => {
 		<div class=${FORM_CLASS}>	
 			<div class=${FORM_TOP_CLASS}>
 				${Header(boardName)}
-				${Editor(options.emails)}
+				${Editor(emails)}
 			</div>
 			<div class=${FORM_BOTTOM_CLASS}>
 				${Footer()}
@@ -31,9 +34,26 @@ const Form = ({ ...options }) => {
 
 	form.innerHTML = template;
 
+	const getEmails = () => emails;
+
+	const setEmails = (newEmails) => {
+		emails = [...newEmails];
+		// render(emails);
+		callback(emails);
+	};
+
+	const subscribe = (newCallback) => {
+		callback = newCallback;
+	}
+
 	console.log(`Build -- [Form] -- end`);
 
-	return form;
+	return {
+		form,
+		getEmails,
+		setEmails,
+		subscribe
+	}
 };
 
 export default Form;

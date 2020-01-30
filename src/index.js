@@ -5,14 +5,19 @@ import Form from "./components/Form";
 
 // TODO log time spent
 
-const EmailsEditor = ({container, ...options}) => {
-    console.log(`Render -- [EmailsEditor] -- Render in ${container.id} with options ${JSON.stringify(options)}`);
+const EmailsEditor = ({ container, ...options }) => {
+	console.log(`Render -- [EmailsEditor] -- Render in ${container.id} with options ${JSON.stringify(options)}`);
 
-    const form = Form(options);
+	const { form, getEmails, setEmails, subscribe } = Form(options);
+	container.append(form);
 
-    container.append(form);
+	console.log(`Render -- [EmailsEditor] -- Finishing rendering`);
 
-    console.log(`Render -- [EmailsEditor] -- Finishing rendering`);
+	return {
+		getEmails,
+		setEmails,
+		subscribe
+	};
 };
 
 export default EmailsEditor;

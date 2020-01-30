@@ -14,7 +14,7 @@ const Editor = (emails) => {
     `, "");
 
     const template = `
-        <div class=${EDITOR_CLASS}>
+        <div class=${EDITOR_CLASS} data-ns="editor">
             ${existingEmails}
             <input class=${INPUT_CLASS} type="text" placeholder="add more people...">
         </div>
