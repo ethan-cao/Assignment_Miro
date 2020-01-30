@@ -1,11 +1,12 @@
 #{$BUTTON_PRIMARY} {
-    color: #fff;
-    background-color: #4262FF;
-    border-color: #4262FF; 
-    padding: 14px 24px 16px;
-    // margin: 10px;
-    text-align: center;
+    color: white;
+    background-color: $blue;
+    border-color: $blue;
     border-radius: 4px;
     border: 1px solid;
+    padding: 10px 20px 10px 20px;
+    margin: 0px 10px;
+    text-align: center;
+    font: 400 14px/24px Open Sans,sans-serif;
     cursor: pointer;
 }

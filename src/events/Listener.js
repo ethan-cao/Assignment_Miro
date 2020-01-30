@@ -1,7 +1,7 @@
 "use strict";
 
 const EventListener = {
-    listenEvents : function(element, ...events) {
+    listenOn : function(element, ...events) {
         events.forEach((event) => {
             console.log(event);
 

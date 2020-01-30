@@ -33,7 +33,7 @@
 }
 
 #{$EMAIL}::after {
-    content: "\D7";
+    content: $cross;
     font-size: large;
     padding: 0px 5px;
     cursor: pointer; 
