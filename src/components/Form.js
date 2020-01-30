@@ -13,11 +13,12 @@ const Form = ({ ...options }) => {
 	console.log(`Build -- [Form] -- start`);
 
 	let boardName = options.boardName;
+	let id = boardName.replace(/\s/g, ''); 
 	let emails = options.emails;
 	let callback = () => {};
 
 	const form = document.createElement("div");
-	form.setAttribute("id", boardName);
+	form.setAttribute("id", id);
 	form.setAttribute("class", CONTAINER_CLASS);
 
 	const template = `
@@ -35,7 +36,7 @@ const Form = ({ ...options }) => {
 	form.innerHTML = template;
 
 	const renderEmails = (emails) => {	
-		const editor = document.querySelector('.' + Editor.EDITOR_CLASS);
+		const editor = document.querySelector('#' + id + ' .' + Editor.EDITOR_CLASS);
 		editor.innerHTML = Editor.innerTemplate(emails);
 	}
 
