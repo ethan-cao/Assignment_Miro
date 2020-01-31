@@ -27,10 +27,11 @@ module.exports = {
 				test: /\.scss$/,
 				exclude: /(node_modules|bower_components)/,
 				use: [
-					IS_PROD ? MiniCssExtractPlugin.loader : "style-loader",
-					"style-loader",
-					"css-loader",
-					"sass-loader"
+					process.env.NODE_ENV !== 'production'
+					? 'style-loader'
+					: MiniCssExtractPlugin.loader,
+				  'css-loader',
+				  'sass-loader'
 				]
 			}
 		]
