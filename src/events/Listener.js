@@ -6,8 +6,8 @@ const Listener = {
     listenOn: function(element, events, actions) {
         events.forEach((event) => {
             element.addEventListener(event,	(event) => {
-                event.stopImmediatePropagation();
-                
+                event.stopPropagation();
+
                 const target = event.target;
                 const type = event.type;
                 const nameSpace = target.dataset.ns;

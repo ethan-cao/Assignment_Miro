@@ -34,7 +34,7 @@ Editor.innerTemplate = (emails) => {
             </div>
         `
     }, "") + 
-    `<input class=${Editor.INPUT_CLASS} data-ns=${RECORD} type="text" placeholder="add more people..."></input>`
+    `<input class=${Editor.INPUT_CLASS} data-ns=${RECORD} type="text" contenteditable="true" placeholder="add more people..."></input>`
 };
 
 export default Editor;
