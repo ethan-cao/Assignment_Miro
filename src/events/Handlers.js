@@ -1,6 +1,7 @@
 "use strict";
 
 import { ENTER, COMMA } from "./Keys";
+import getRandomEmail from "../utils/getRandomEmail";
 
 const handle = function(ns, type, target, actions) {
     const eventKey = type + "." + ns;
@@ -23,10 +24,14 @@ const EventMap = {
 	},
 	"click.ADD": (target, actions) => {
 		const emails = actions.getEmails();
-		emails.push("cao@gmail.com");
+		const newEmail = getRandomEmail();
+		emails.push(newEmail);
         actions.setEmails(emails);
 	},
-	"click.GET": () => {
+	"click.GET_COUNT": (target, actions, event) => {
+		const count = 1;
+
+		alert("Valid emails count : " + count);
     },
 	"keydown.RECORD": (target, actions, event) => {
 		const key = event.which || event.keyCode;

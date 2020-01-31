@@ -1,6 +1,7 @@
 "use strict";
 
 import Button from "./Button";
+import { ADD, GET_COUNT } from "../events/NameSpace";
 
 const FOOTER_CLASS = "form__footer";
 
@@ -9,8 +10,8 @@ const Footer = () => {
 
     const template = `
         <div class=${FOOTER_CLASS}>
-            ${Button("Add email")}
-            ${Button("Get emails count")}
+            ${Button("Add email", ADD)}
+            ${Button("Get emails count", GET_COUNT)}
         </div>
     `;
 
