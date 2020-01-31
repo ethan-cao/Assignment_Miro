@@ -5,8 +5,6 @@ const app = express();
 const port = process.env.PORT || 8080;
 const staticPath = path.join(__dirname);
 
-console.log ("system port : ", port);
-
 app.listen(port, () => {
   console.log("Server listening at port " + port);
 });
