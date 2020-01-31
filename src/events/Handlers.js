@@ -57,7 +57,6 @@ const EventMap = {
 			emails.push(newEmail);
 			actions.setEmails(emails);
 		}
-
 	},
 	"paste.RECORD": (target, actions, event) => {
 			let newEmails = (event.clipboardData || window.clipboardData).getData("text");

@@ -44,6 +44,8 @@ const Form = ({ ...options }) => {
 	const getEmails = () => emails;
 
 	const setEmails = (newEmails) => {
+		newEmails = newEmails.map(email => email.trim());
+
 		emails = [...newEmails];
 		renderEmails(emails);
 		callback(emails);
