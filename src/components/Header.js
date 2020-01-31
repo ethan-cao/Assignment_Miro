@@ -3,7 +3,7 @@
 const HEADER_CLASS = "form__header";
 
 const Header = (boardName) => {
-	console.log(`Build -- [Header] -- start`);
+	// console.log(`Build -- [Header] -- start`);
 
     const template = `
         <div class=${HEADER_CLASS}>
@@ -11,7 +11,7 @@ const Header = (boardName) => {
         </div>
     `;
 
-    console.log(`Build -- [Header] -- end`);
+    // console.log(`Build -- [Header] -- end`);
 
     return template;
 };

@@ -12,7 +12,7 @@ const Listener = {
                 const type = event.type;
                 const nameSpace = target.dataset.ns;
                 
-                console.log(`${type} on ${nameSpace}`);
+                // console.log(`${type} on ${nameSpace}`);
                 
                 handle(nameSpace, type, target, actions);
             });

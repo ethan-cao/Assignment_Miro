@@ -47,8 +47,6 @@ const EventMap = {
 			const newEmail = target.value;
 			target.value = "";
 
-			// security check
-
 			if (newEmail === null || newEmail === undefined || newEmail === "" ) {
 				return;
 			}
@@ -73,8 +71,6 @@ const EventMap = {
 	"focusout.RECORD": (target, actions, event) => {
 		const newEmail = target.value;
 		target.value = "";
-
-		// security check
 
 		if (newEmail === null || newEmail === undefined || newEmail === "") {
 			return;

@@ -3,7 +3,7 @@
 import Header from "./Header";
 import Editor from "./Editor";
 import Footer from "./Footer";
-import validateEmail from "../utils/validateEmail";
+import sanitizeInput from "../security/sanitizeInput";
 
 const CONTAINER_CLASS = "form-container";
 const FORM_CLASS = "form";
@@ -44,7 +44,8 @@ const Form = ({ ...options }) => {
 	const getEmails = () => emails;
 
 	const setEmails = (newEmails) => {
-		newEmails = newEmails.map(email => email.trim());
+		newEmails = newEmails.map(email => sanitizeInput(email.trim()))
+				            .filter(email => email !== "");
 
 		emails = [...newEmails];
 		renderEmails(emails);

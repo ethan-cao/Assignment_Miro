@@ -6,7 +6,7 @@ import { ADD, GET_COUNT } from "../events/NameSpace";
 const FOOTER_CLASS = "form__footer";
 
 const Footer = () => {
-	console.log(`Build -- [Footer] -- start`);
+	// console.log(`Build -- [Footer] -- start`);
 
     const template = `
         <div class=${FOOTER_CLASS}>
@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
     `;
 
-    console.log(`Build -- [Footer] -- end`);
+    // console.log(`Build -- [Footer] -- end`);
 
     return template;
 };

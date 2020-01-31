@@ -3,7 +3,7 @@
 const BUTTON_PRIMARY_CLASS= "button_primary";
 
 const Button = (label, ns) => {
-	console.log(`Build -- [Button] -- start`);
+	// console.log(`Build -- [Button] -- start`);
 
     const template = `
         <button type="button" class=${BUTTON_PRIMARY_CLASS} data-ns=${ns}>
@@ -11,7 +11,7 @@ const Button = (label, ns) => {
         </button>
     `;
 
-    console.log(`Build -- [Button] -- end`);
+    // console.log(`Build -- [Button] -- end`);
 
     return template;
 };

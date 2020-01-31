@@ -4,7 +4,7 @@ import {REMOVE, RECORD} from "../events/NameSpace";
 import validateEmail from "../utils/validateEmail";
 
 const Editor = (emails) => {
-    console.log(`Build -- [Editor] -- start`);
+    // console.log(`Build -- [Editor] -- start`);
     
     const template = `
         <div class=${Editor.EDITOR_CLASS} data-ns="editor">
@@ -12,7 +12,7 @@ const Editor = (emails) => {
         </div>
     `;
 
-    console.log(`Build -- [Editor] -- end`);
+    // console.log(`Build -- [Editor] -- end`);
 
     return template;
 };
