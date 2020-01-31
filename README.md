@@ -6,7 +6,7 @@
 	2. include the script to load EmailsEditor and set a container in DOM like the code snippet below
 			
 			<div id="emails-editor"></div>
-			<script src="dist/emails-editor.js"></script>
+			<script src="emails-editor.js"></script>
 			<script>
 			// EmailsEditor will be added in the container
     		const container = document.querySelector("#emails-editor");
