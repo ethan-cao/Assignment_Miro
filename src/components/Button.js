@@ -1,7 +1,6 @@
 "use strict";
 
 const BUTTON_PRIMARY_CLASS= "button_primary";
-const BUTTON_SECONDARY_CLASS= "button_secondary";
 
 const Button = (label, ns) => {
 	console.log(`Build -- [Button] -- start`);

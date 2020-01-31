@@ -36,8 +36,12 @@
 }
 
 #{$REMOVER}::after {
-    content: $cross;
-    font-size: large;
-    padding: 0px 5px;
-    cursor: pointer; 
+	content: $cross;
+	font-size: large;
+	padding: 0px 5px;
+	cursor: pointer;
+}
+
+#{$EMAIL_ERROR} {
+	text-decoration: underline red;
 }

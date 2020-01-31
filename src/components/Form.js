@@ -3,6 +3,7 @@
 import Header from "./Header";
 import Editor from "./Editor";
 import Footer from "./Footer";
+import validateEmail from "../utils/validateEmail";
 
 const CONTAINER_CLASS = "form-container";
 const FORM_CLASS = "form";

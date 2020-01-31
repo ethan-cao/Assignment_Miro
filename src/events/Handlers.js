@@ -2,6 +2,7 @@
 
 import { ENTER, COMMA } from "./Keys";
 import getRandomEmail from "../utils/getRandomEmail";
+import validateEmail from "../utils/validateEmail";
 
 const handle = function(ns, type, target, actions) {
     const eventKey = type + "." + ns;
@@ -29,7 +30,14 @@ const EventMap = {
         actions.setEmails(emails);
 	},
 	"click.GET_COUNT": (target, actions, event) => {
-		const count = 1;
+		let count = 0;
+
+		const emails = actions.getEmails();
+		emails.forEach( email => {
+			if (validateEmail(email)){
+				count++;
+			}
+		});
 
 		alert("Valid emails count : " + count);
     },
