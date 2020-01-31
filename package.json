@@ -14,7 +14,7 @@
 		"start": "node ./index.js",
 		"build": "webpack -p --config webpack.config.js --progress",
 		"test": "jest",
-		"heroku-postbuild": "npm install && npm run build"
+		"heroku-postbuild": "npm install --dev && npm run build"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.4.4",
