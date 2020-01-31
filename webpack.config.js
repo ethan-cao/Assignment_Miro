@@ -28,6 +28,7 @@ module.exports = {
 				exclude: /(node_modules|bower_components)/,
 				use: [
 					IS_PROD ? MiniCssExtractPlugin.loader : "style-loader",
+					"style-loader",
 					"css-loader",
 					"sass-loader"
 				]
