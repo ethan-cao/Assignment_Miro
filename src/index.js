@@ -12,7 +12,7 @@ const EmailsEditor = ({ container, ...options }) => {
 	const { form, getEmails, setEmails, subscribe } = Form(options);
     container.append(form);
     
-    Listener.listenOn(form, ["click", "keydown"], {setEmails, getEmails});
+    Listener.listenOn(form, ["click", "keydown", "focusout"], {setEmails, getEmails});
 
 	console.log(`Render -- [EmailsEditor] -- Finishing rendering`);
 

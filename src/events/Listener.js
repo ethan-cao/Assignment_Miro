@@ -1,24 +1,22 @@
 "use strict";
 
-import Handlers from "./Handlers";
+import handle from "./Handlers";
 
 const Listener = {
-    listenOn : function(element, events, actions) {
-
+    listenOn: function(element, events, actions) {
         events.forEach((event) => {
-            console.log(event);
-
-            element.addEventListener(event, (event) => {
-
+            element.addEventListener(event,	(event) => {
+                event.stopImmediatePropagation();
+                
                 const target = event.target;
                 const type = event.type;
                 const nameSpace = target.dataset.ns;
                 
                 console.log(`${type} on ${nameSpace}`);
-
-                Handlers.handle(nameSpace, type, target, actions);
-            })
-        } );
+                
+                handle(nameSpace, type, target, actions);
+            });
+        });
     }
 };
 
