@@ -24,7 +24,7 @@
 					const form3 = EmailsEditor({ container, ...options3 });
 			*/
 			</script>
-	![enter image description here](https://raw.githubusercontent.com/ethan-cao/Assignment_Miro/master/pics/example.png)
+	![enter image description here](https://raw.githubusercontent.com/ethan-cao/Assignment_Miro/master/public/example.png)
 
 - API	
 	1. getEmails()     
