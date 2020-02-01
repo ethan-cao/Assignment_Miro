@@ -34,10 +34,10 @@
 		`form1.getEmails(["email1", "emails"])` will display email1 and email2 as block in the editor
 		
 	3.	subscribe(callback)     
-	user can subscribe to changes with a callback, in this example, newly set emails ["afasdf", "asdfasdfasdf@asd.com"] will be printed
+	user can subscribe to changes with a callback, in the following example, newly set emails ["afasdf", "asdfasdfasdf@asd.com"] will be printed out
 	
-	  `form1.subscribe( emails => console.log(emails))`
-	  `form1.setEmails(["afasdf", "asdfasdfasdf@asd.com"])`
+	  form1.subscribe( emails => console.log(emails))
+	  form1.setEmails(["afasdf", "asdfasdfasdf@asd.com"])
 	
 	
 -   Built version:  [dist/emails-editor.js](https://github.com/ethan-cao/Assignment_Miro/blob/master/dist/emails-editor.js "emails-editor.js")
