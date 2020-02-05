@@ -1,5 +1,3 @@
-# Assignment_Miro
-
 - Demo: https://miro-assignment.herokuapp.com/
 
 - How to use
