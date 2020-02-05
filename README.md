@@ -26,14 +26,14 @@
 			</script>
 	![enter image description here](https://raw.githubusercontent.com/ethan-cao/Assignment_Miro/master/public/example.png)
 
-- Feature
-	1.Email block should be created by pressing Enter, comma, or by losing focus on the input field. Any string can be converted to a block. A Block can be deleted.
-	2. Email editor block’s width must depend on the parent container’s width. If parent width changes, emails should be redistributed by rows.
-	3. If there are a lot of emails in the editor, the user should be able to scroll this block.
-	4. Emails, pasted via ctrl+v/cmd+v should be split and converted into several blocks. For example, string “ivan@mail.ru, max@mail.ru” should be converted into 2 email blocks.	
-	5. Invalid emails should be converted into blocks with a red underline.
-	6. By clicking "Add email" button a random email should be added to the list.
-	7. By clicking the "Get emails count" button a user should see an alert with valid emails count.
+- Feature    
+	1.Email block should be created by pressing Enter, comma, or by losing focus on the input field. Any string can be converted to a block. A Block can be deleted.    
+	2. Email editor block’s width must depend on the parent container’s width. If parent width changes, emails should be redistributed by rows.    
+	3. If there are a lot of emails in the editor, the user should be able to scroll this block.    
+	4. Emails, pasted via ctrl+v/cmd+v should be split and converted into several blocks. For example, string “ivan@mail.ru, max@mail.ru” should be converted into 2 email blocks.    
+	5. Invalid emails should be converted into blocks with a red underline.    
+	6. By clicking "Add email" button a random email should be added to the list.    
+	7. By clicking the "Get emails count" button a user should see an alert with valid emails count.    
 
 - API	
 	1. getEmails()     
