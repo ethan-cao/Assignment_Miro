@@ -1,4 +1,4 @@
-- Demo: https://email-editor-test.herokuapp.com/
+- Demo: https://miro-assignment.herokuapp.com/
 
 - How to use
 	1. download the built verison ([dist/emails-editor.js](https://github.com/ethan-cao/Assignment_Miro/blob/master/dist/emails-editor.js "emails-editor.js"))
