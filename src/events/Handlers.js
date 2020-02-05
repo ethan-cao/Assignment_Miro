@@ -45,11 +45,15 @@ const EventMap = {
 		const key = event.which || event.keyCode;
 
 		if (key === ENTER || key === COMMA) {
-			const newEmail = target.value;
+			let newEmail = target.value;
 			target.value = "";
 
 			if (newEmail === null || newEmail === undefined || newEmail === "" ) {
 				return;
+			}
+
+			if ( newEmail.charAt(newEmail.length-1) === "," ) {
+				newEmail = newEmail.substring(0, newEmail.length - 1);
 			}
 
 			const emails = actions.getEmails();
