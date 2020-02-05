@@ -38,7 +38,7 @@
 		`form1.getEmails()` return ["john@miro.com"]
 		
 	2. setEmails()    
-		`form1.getEmails(["email1", "emails"])` will display email1 and email2 as block in the editor
+		`form1.setEmails(["email1", "emails"])` will display email1 and email2 as block in the editor
 		
 	3.	subscribe(callback)     
 	user can subscribe to changes with a callback, in the following example, newly set emails ["afasdf", "asdfasdfasdf@asd.com"] will be printed out
