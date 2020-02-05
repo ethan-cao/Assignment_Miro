@@ -3,6 +3,7 @@
 import { ENTER, COMMA } from "./Keys";
 import getRandomEmail from "../utils/getRandomEmail";
 import validateEmail from "../utils/validateEmail";
+import debounce from "../utils/debounce";
 
 const handle = function(ns, type, target, actions) {
 	const eventKey = type + "." + ns;
@@ -40,7 +41,7 @@ const EventMap = {
 
 		alert("Valid emails count : " + count);
 	},
-	"keydown.RECORD": (target, actions, event) => {
+	"keydown.RECORD": debounce(function(target, actions, event) {
 		const key = event.which || event.keyCode;
 
 		if (key === ENTER || key === COMMA) {
@@ -55,7 +56,8 @@ const EventMap = {
 			emails.push(newEmail);
 			actions.setEmails(emails);
 		}
-	},
+
+	}, 300, false),
 	"paste.RECORD": (target, actions, event) => {
 			let newEmails = (event.clipboardData || window.clipboardData).getData("text");
 
