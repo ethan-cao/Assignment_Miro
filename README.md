@@ -1,7 +1,7 @@
-- Demo: https://miro-assignment.herokuapp.com/
+- Demo: https://email-editor-test.herokuapp.com/
 
 - How to use
-	1. download the built verison ([dist/emails-editor.js](https://github.com/ethan-cao/Assignment_Miro/blob/master/dist/emails-editor.js "emails-editor.js"))
+	1. download the built verison ([dist/emails-editor.js](https://github.com/ethan-cao/Email-editor/blob/master/dist/emails-editor.js "emails-editor.js"))
 	2. include the script to load EmailsEditor and set a container in DOM like the code snippet below
 			
 			<div id="emails-editor"></div>
@@ -47,4 +47,4 @@
 	  form1.setEmails(["afasdf", "asdfasdfasdf@asd.com"])
 	
 	
--   Built version:  [dist/emails-editor.js](https://github.com/ethan-cao/Assignment_Miro/blob/master/dist/emails-editor.js "emails-editor.js")
+-   Built version:  [dist/emails-editor.js](https://github.com/ethan-cao/Email-editor/blob/master/dist/emails-editor.js "emails-editor.js")
