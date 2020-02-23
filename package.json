@@ -3,12 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"author": "Guangxue Cao",
-	"homepage": "https://github.com/ethan-cao/Assignment_Miro#readme",
 	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ethan-cao/Assignment_Miro.git"
-	},
 	"main": "index.js",
 	"scripts": {
 		"start": "node ./index.js",

@@ -22,7 +22,7 @@
 					const form3 = EmailsEditor({ container, ...options3 });
 			*/
 			</script>
-	![enter image description here](https://raw.githubusercontent.com/ethan-cao/Assignment_Miro/master/public/example.png)
+	![enter image description here](https://raw.githubusercontent.com/ethan-cao/Email-edito/master/public/example.png)
 
 - Feature    
 	1.Email block should be created by pressing Enter, comma, or by losing focus on the input field. Any string can be converted to a block. A Block can be deleted.    
